@@ -1,0 +1,12 @@
+# config-map.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  namespace: employee-app
+data:
+  # Frontend config
+  REACT_APP_SERVER_URL: "http://backend-service:8080/employees"
+  # Backend config
+  ALLOWED_ORIGINS: "http://frontend-service"
+
